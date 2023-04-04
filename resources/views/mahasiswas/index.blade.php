@@ -5,6 +5,12 @@
         <div class="pull-left mt-2">
             <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
         </div>
+        <!-- Form Search Bar -->
+        <form class="form-left my-4" method="get" action="{{ route('search') }}">
+            <div class="form-group w-80 mb-3">
+                <input type="text" name="search" class="form-control w-50 d-inline" id="search" placeholder="Search">
+        </form>
+        <!-- Form Search Bar End -->
         <div class="float-right my-2">
             <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Input Mahasiswa</a>
         </div>

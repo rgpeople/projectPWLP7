@@ -76,4 +76,13 @@ class MahasiswaController extends Controller
         Mahasiswa::find($Nim)->delete();
         return redirect()->route('mahasiswas.index')->with('success', 'Mahasiswa Berhasil Dihapus');
     }
+
+    // Funsi Search bar
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+        $mahasiswas = Mahasiswa::where('Nama', 'like', '%' . $keyword . '%')->paginate(5);
+        return view('mahasiswas.index', compact('mahasiswas'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
+    // Fungsi Search bar End
 };
