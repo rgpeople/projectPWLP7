@@ -14,6 +14,10 @@
                     <li class="list-group-item"><b>Kelas: </b>{{$Mahasiswa->Kelas}}</li>
                     <li class="list-group-item"><b>Jurusan: </b>{{$Mahasiswa->Jurusan}}</li>
                     <li class="list-group-item"><b>No_Handphone: </b>{{$Mahasiswa->No_Handphone}}</li>
+                    <!-- Tambah Detail Email & Tanggal Lahir -->
+                    <li class="list-group-item"><b>Email: </b>{{$Mahasiswa->Email}}</li>
+                    <li class="list-group-item"><b>Tanggal_Lahir: </b>{{$Mahasiswa->Tanggal_Lahir}}</li>
+                    <!-- End Tambah Detail -->
                 </ul>
             </div>
             <a class="btn btn-success mt-3" href="{{ route('mahasiswas.index') }}">Kembali</a>

@@ -12,8 +12,7 @@
             <div class="card-body">
                 @if ($errors->any())
                 <div class="alert alert-danger">
-                    <strong>Whoops!</strong> There were some problems with your i
-                    nput.<br><br>
+                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
                     <ul>
                         @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -21,7 +20,7 @@
                     </ul>
                 </div>
                 @endif
-                <form method="post" action="{{ route('mahasiswas.update', $Mahasiswa->Nim) }}" id="myForm">
+                <form method="POST" action="{{ route('mahasiswas.update', $Mahasiswa->Nim) }}" id="myForm">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
@@ -42,8 +41,17 @@
                     </div>
                     <div class="form-group">
                         <label for="No_Handphone">No_Handphone</label>
-
                         <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone" value="{{ $Mahasiswa->No_Handphone }}" ariadescribedby="No_Handphone">
+                    </div>
+                    <!-- Tambah Form Email -->
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input type="text" name="Email" class="form-control" id="Email" value="{{ $Mahasiswa->Email }}" ariadescribedby="Email">
+                    </div>
+                    <!-- Tambah Form Tanggal Lahir -->
+                    <div class="form-group">
+                        <label for="Tanggal_Lahir">Tanggal Lahir</label>
+                        <input type="text" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir" value="{{ $Mahasiswa->Tanggal_Lahir }}" ariadescribedby="Tanggal_Lahir">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
