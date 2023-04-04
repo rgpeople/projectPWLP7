@@ -55,4 +55,8 @@
     </tr>
     @endforeach
 </table>
+<!-- Tabel Pagination Supaya Bisa Pindah Halaman -->
+<div class="d-flex w-1 h-1">
+    {!! $mahasiswas->links() !!}
+</div>
 @endsection

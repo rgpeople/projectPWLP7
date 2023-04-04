@@ -21,3 +21,5 @@ use Illuminate\Http\Request;
  });
 
 Route::resource('mahasiswas', MahasiswaController::class);
+// Tambah Route Pagination
+Route::get('/mahasiswas', [MahasiswaController::class, 'index']);
