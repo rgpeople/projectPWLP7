@@ -10,7 +10,12 @@ class Kelas extends Model
     use HasFactory;
     protected $table = 'kelas'; //Mendefinisikan bahwa model ini terkait dengan tabel kelas
 
-    public function mahasiswa(){
-        return $this->hasMany(Mahasiswa::class);
+    // public function mahasiswa(){
+    //     return $this->hasMany(Mahasiswa::class);
+    // }
+    
+    public function matakuliah()
+    {
+        return $this->belongsToMany(Mahasiswa_Matakuliah::class);
     }
 }

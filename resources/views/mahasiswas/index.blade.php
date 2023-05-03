@@ -56,6 +56,8 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger">Delete</button>
+                <!-- Penambahan Tombol Nilai -->
+                <a class="btn btn-warning" href="{{ route('khs', $Mahasiswa->Nim) }}">Nilai</a>
             </form>
         </td>
     </tr>
