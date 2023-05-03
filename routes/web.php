@@ -22,6 +22,6 @@ use Illuminate\Http\Request;
 
 Route::resource('mahasiswas', MahasiswaController::class);
 // Tambah Route Pagination
-Route::get('/mahasiswas', [MahasiswaController::class, 'index']);
+Route::get('/list', [MahasiswaController::class, 'index']);
 // Tambah Route untuk Search
 Route::get('/search', [MahasiswaController::class, 'search'])->name('search');
